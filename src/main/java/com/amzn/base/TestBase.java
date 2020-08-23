@@ -1,3 +1,8 @@
+/*In this framework we are making only 1 parent class which is extended by all page as well as test classes. 
+* This is not the best approach.  We should ideally create 1 basePage class which is extended by all pages and there should be a 
+* driver base which should be extended by all test class to initiate driver and open browser. 
+*/
+
 package com.amzn.base;
 
 import java.io.FileInputStream;
