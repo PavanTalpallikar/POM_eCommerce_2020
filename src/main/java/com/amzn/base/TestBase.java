@@ -22,6 +22,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.amzn.utils.Constants;
 import com.amzn.utils.Report;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestBase {
 
 	public WebDriver driver;
@@ -59,7 +61,8 @@ public class TestBase {
 				Report.info("Bowser is chrome");
 				ChromeOptions cOptions = new ChromeOptions();
 				cOptions.addArguments("--disable-notifications");
-				System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
+				WebDriverManager.chromedriver().setup();
+				//System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
 				driver = new ChromeDriver(cOptions);
 				
 			} else if (browserName.equalsIgnoreCase("mozilla")) {

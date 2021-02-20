@@ -26,12 +26,12 @@ public class LoginPage extends TestBase{
 	
 	public void doLogin(String username, String password) {
 		
-		System.out.println("In do login class");
+		System.out.println("In do login method");
 		
 		DriverUtils.navigateToURL(driver, prop.getProperty("URL"));
 		waitImplicitInSeconds(Constants.IMPLICITLY_WAIT_05);
 		
-		findElementByXpath(XPATH_USERNAME).sendKeys(username);
+		/*findElementByXpath(XPATH_USERNAME).sendKeys(username);
 		waitImplicitInSeconds(Constants.IMPLICITLY_WAIT_02);
 
 		findElementByXpath(XPATH_CONTINUE_BUTTON).click();
@@ -41,7 +41,7 @@ public class LoginPage extends TestBase{
 		waitImplicitInSeconds(Constants.IMPLICITLY_WAIT_02);
 		
 		findElementByXpath(XPATH_LOGIN_BUTTON);
-		waitImplicitInSeconds(Constants.IMPLICITLY_WAIT_05);
+		waitImplicitInSeconds(Constants.IMPLICITLY_WAIT_05);*/
 	}
 
 }
